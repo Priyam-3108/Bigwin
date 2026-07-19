@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Bigwin Buildsys Coated Private Limited</title>
+  <meta name="description"
+    content="Learn about Bigwin Buildsys, a leading manufacturer of solar module mounting structures and pre-engineered steel solutions since 2020.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/png" href="assets/images/bigwin.ico">
+  <style>
+    /* White Navbar Overrides */
+    #main-nav.nav-glass {
+      background: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    #main-nav.nav-glass.scrolled {
+      background: #ffffff !important;
+      box-shadow: 0 4px 20px rgba(10, 25, 47, 0.08) !important;
+    }
+
+    #main-nav .nav-link {
+      color: rgba(10, 25, 47, 0.70) !important;
+      font-size: 0.85rem !important;
+      letter-spacing: 0.15em !important;
+    }
+
+    #main-nav .nav-link:hover,
+    #main-nav .nav-link.active {
+      color: var(--navy) !important;
+    }
+
+    #main-nav .nav-link::after {
+      background: var(--navy) !important;
+    }
+
+    #main-nav #mobile-open svg {
+      stroke: var(--navy) !important;
+    }
+
+    /* Facility Hover Zoom Override */
+    .facility-card {
+      cursor: pointer;
+    }
+
+    .facility-img {
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .facility-card:hover .facility-img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="main-nav" class="nav-glass" style="position:fixed;top:0;left:0;right:0;z-index:50;height:96px">
+    <div class="container-xl" style="display:flex;align-items:center;justify-content:space-between;height:100%">
+      <a href="index.html" style="display:flex;align-items:center;height:100%;text-decoration:none">
+        <img src="assets/images/bigwin.png" alt="Bigwin Buildsys" style="height:76px;width:auto;object-fit:contain">
+      </a>
+      <div style="display:flex;gap:2rem;align-items:center" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="clients.html" class="nav-link">Clients</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center">
+        <a href="contact.html" class="btn-gold"><span>Request Quote</span></a>
+        <button id="mobile-open" style="background:none;border:none;cursor:pointer">
+          <svg width="24" height="24" fill="none" stroke="white" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-overlay">
+    <button id="mobile-close"
+      style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer"><svg width="28"
+        height="28" fill="none" stroke="white" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg></button>
+    <a href="index.html">Home</a><a href="products.html">Products</a><a href="solutions.html">Solutions</a><a
+      href="about.html">About Us</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn-gold" style="margin-top:1rem"><span>Request Quote</span></a>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <header class="page-hero" style="padding-top:96px;min-height:720px">
+    <div class="page-hero-bg"
+      style="background-image:url('assets/images/Key Achivments BG.png');background-position:center 30%"></div>
+    <div class="page-hero-grad"></div>
+    <div class="container-xl" style="position:relative;z-index:1;width:100%;padding-bottom:1rem">
+      <div class="fade-up">
+        <div class="section-label">Who We Are</div>
+      </div>
+      <h1 class="fade-up fade-up-d1"
+        style="font-size:clamp(2.5rem,6vw,5rem);font-weight:300;letter-spacing:-0.05em;color:white;line-height:0.95;margin-bottom:1.25rem">
+        About<br><span class="gradient-text-gold">Bigwin</span> Buildsys
+      </h1>
+      <p class="fade-up fade-up-d2" style="font-size:1rem;color:rgba(255,255,255,0.65);max-width:560px;line-height:1.7">
+        Building structures that power the future through precision, innovation, and engineering excellence.
+      </p>
+    </div>
+  </header>
+
+  <!-- ═══ ABOUT INTRO ═══ -->
+  <section class="section-pad" style="background:white">
+    <div class="container-xl">
+      <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center" class="lg-grid-2">
+        <div class="reveal">
+          <div class="section-label">Our Company</div>
+          <h2
+            style="font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:1.5rem">
+            A Trusted Name in<br>Solar Module Mounting Solutions
+          </h2>
+          <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.85;margin-bottom:1.25rem">
+            Bigwin Buildsys Coated Private Limited is a leading manufacturer of solar module mounting structures and
+            pre-engineered steel solutions. With a strong foundation in engineering excellence, we specialize in
+            delivering high-performance, cost-effective solutions for solar and infrastructure projects.
+          </p>
+          <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.85;margin-bottom:2rem">
+            Driven by innovation and backed by advanced manufacturing capabilities, we ensure precision, durability, and
+            consistency in every product we deliver. Our commitment to quality and timely execution has made us a
+            trusted partner for clients across industries.
+          </p>
+        </div>
+        <div class="reveal reveal-d1">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+            <div style="background:var(--navy);border-radius:1.25rem;padding:2rem;text-align:center">
+              <div style="font-size:2.2rem;font-weight:900;color:var(--gold)">6GW</div>
+              <div
+                style="font-size:0.7rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.5rem">
+                Manufacturing Capacity</div>
+            </div>
+            <div
+              style="background:#f8fafc;border:1px solid #e8edf5;border-radius:1.25rem;padding:2rem;text-align:center">
+              <div style="font-size:1.85rem;font-weight:900;color:var(--navy);line-height:1.2">1,00,000+ MT</div>
+              <div
+                style="font-size:0.7rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.5rem">
+                Annual Manufacturing Capacity</div>
+            </div>
+            <div
+              style="background:#f8fafc;border:1px solid #e8edf5;border-radius:1.25rem;padding:2rem;text-align:center">
+              <div style="font-size:2rem;font-weight:900;color:var(--navy);line-height:1.2">1,00,000</div>
+              <div
+                style="font-size:0.7rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.5rem">
+                Sq. Ft. Manufacturing Facility</div>
+            </div>
+            <div style="background:var(--gold);border-radius:1.25rem;padding:2rem;text-align:center">
+              <div style="font-size:2.5rem;font-weight:900;color:var(--navy)">3</div>
+              <div
+                style="font-size:0.7rem;color:var(--navy);text-transform:uppercase;letter-spacing:0.15em;margin-top:0.5rem;font-weight:700;opacity:0.7">
+                Manufacturing Unit in 3 States</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MISSION VISION VALUES ═══ -->
+  <section class="section-pad" style="background:var(--off-white)">
+    <div class="container-xl">
+      <div style="display:grid;grid-template-columns:1fr;gap:2rem" class="lg-grid-3-auto">
+        <!-- Mission -->
+        <div class="reveal"
+          style="background:var(--navy);border-radius:1.25rem;padding:3rem;position:relative;overflow:hidden">
+          <div
+            style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(212,175,55,0.06);border-radius:50%">
+          </div>
+          <div
+            style="width:48px;height:48px;background:rgba(212,175,55,0.15);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="10 8 16 12 10 16 10 8" fill="var(--gold)" stroke="none" />
+            </svg>
+          </div>
+          <div
+            style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:0.75rem">
+            Our Mission</div>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.8">
+            To deliver precision-engineered, durable, and cost-effective solutions that empower solar infrastructure and
+            create lasting value for our customers.
+          </p>
+        </div>
+        <!-- Vision -->
+        <div class="reveal reveal-d1"
+          style="background:white;border:1px solid #e8edf5;border-radius:1.25rem;padding:3rem;position:relative;overflow:hidden">
+          <div
+            style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(212,175,55,0.04);border-radius:50%">
+          </div>
+          <div
+            style="width:48px;height:48px;background:var(--off-white);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <div class="section-label" style="margin-bottom:0.75rem">Our Vision</div>
+          <p style="font-size:0.88rem;color:var(--gray-600);line-height:1.8">
+            To be a globally recognized leader in solar and steel structural solutions through innovation, quality, and
+            sustainable growth.
+          </p>
+        </div>
+        <!-- Values -->
+        <div class="reveal reveal-d2" style="background:var(--gold);border-radius:1.25rem;padding:3rem">
+          <div
+            style="width:48px;height:48px;background:rgba(10,25,47,0.12);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <div
+            style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--navy);font-weight:700;opacity:0.6;margin-bottom:0.75rem">
+            Our Values</div>
+          <div style="display:flex;flex-direction:column;gap:0.625rem">
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Responsibility towards sustainability</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Integrity in every action</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Commitment to quality</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Innovation in engineering</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Customer-first approach</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
+              <span>→</span>Excellence in execution</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY TIMELINE ═══ -->
+  <section class="section-pad" style="background:var(--navy-deep)">
+    <div class="container-xl">
+      <div style="text-align:center;margin-bottom:4rem">
+        <div class="section-label reveal">Our Growth Story</div>
+        <h2 class="reveal reveal-d1" style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:white">Journey of
+          Growth</h2>
+        <p class="reveal reveal-d2"
+          style="font-size:0.95rem;color:rgba(255,255,255,0.45);margin-top:0.75rem;max-width:500px;margin-left:auto;margin-right:auto">
+          From a single line to shaping the future, built on growth, grit, and engineering excellence.</p>
+      </div>
+      <!-- Timeline -->
+      <div style="position:relative;max-width:800px;margin:0 auto">
+        <div class="timeline-line"></div>
+        <!-- 2020 -->
+        <div class="timeline-item reveal"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center;margin-bottom:3.5rem">
+          <div style="text-align:right">
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2020</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">Started first
+              1,500 MT line in Maharashtra</p>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot"></div>
+          </div>
+          <div
+            style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">The Genesis</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Secured Sterling & Wilson as a
+              flagship client</div>
+          </div>
+        </div>
+        <!-- 2021-22 -->
+        <div class="timeline-item reveal reveal-d1"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center;margin-bottom:3.5rem">
+          <div
+            style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">Capacity Expansion</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Added one 1,500 MT line each
+              consecutive year</div>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot"></div>
+          </div>
+          <div>
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2021–22</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">Expanded capacity
+              & scale</p>
+          </div>
+        </div>
+        <!-- 2023 -->
+        <div class="timeline-item reveal reveal-d2"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center;margin-bottom:3.5rem">
+          <div style="text-align:right">
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2023</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">Established
+              Rajasthan Plant</p>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot"></div>
+          </div>
+          <div
+            style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">Geographic Footprint</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Total capacity reached 6,000 MT
+            </div>
+          </div>
+        </div>
+        <!-- 2024 -->
+        <div class="timeline-item reveal"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center;margin-bottom:3.5rem">
+          <div
+            style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">Capacity Breakthrough</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Achieved 9,000 MT manufacturing
+              capacity</div>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot"></div>
+          </div>
+          <div>
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2024</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">9,000 MT
+              milestone achieved</p>
+          </div>
+        </div>
+        <!-- 2025 -->
+        <div class="timeline-item reveal reveal-d1"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center;margin-bottom:3.5rem">
+          <div style="text-align:right">
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2025</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">In-house design
+              engineering</p>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot"></div>
+          </div>
+          <div
+            style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">Solar Tracker Launch</div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Introduced solar tracker
+              structural solution</div>
+          </div>
+        </div>
+        <!-- 2026 -->
+        <div class="timeline-item reveal reveal-d2"
+          style="display:grid;grid-template-columns:1fr 60px 1fr;gap:1.5rem;align-items:center">
+          <div
+            style="background:rgba(212,175,55,0.1);border:1px solid rgba(212,175,55,0.25);border-radius:0.875rem;padding:1.25rem">
+            <div style="font-weight:700;color:white;font-size:0.88rem;margin-bottom:0.5rem">Full Vertical Integration
+            </div>
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);line-height:1.6">Developed in-house galvanizing
+              facility (HDG), becoming a complete MMS provider</div>
+          </div>
+          <div style="display:flex;justify-content:center;position:relative">
+            <div class="timeline-dot" style="box-shadow:0 0 16px rgba(212,175,55,0.6)"></div>
+          </div>
+          <div>
+            <div style="font-size:1.75rem;font-weight:900;color:var(--gold);line-height:1">2026</div>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;margin-top:0.5rem">In-house
+              Galvanizing (HDG)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MANUFACTURING POWERHOUSES ═══ -->
+  <section class="section-pad" style="background:#f8fafc;border-bottom:1px solid #e2e8f0">
+    <div class="container-xl">
+      <div style="text-align:center;margin-bottom:4rem">
+        <div class="section-label reveal">Our Facilities</div>
+        <h2 class="reveal reveal-d1"
+          style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--navy);line-height:1.2">Manufacturing
+          Powerhouses</h2>
+      </div>
+      <div class="grid-3" style="gap:2rem">
+        <!-- Gujarat -->
+        <div class="reveal facility-card">
+          <div
+            style="position:relative;height:240px;border-radius:1rem;overflow:hidden;margin-bottom:1rem;box-shadow:0 8px 24px rgba(10,25,47,0.06)">
+            <div class="facility-img"
+              style="width:100%;height:100%;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80')">
+            </div>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin:0;text-align:center">Gujarat</h3>
+        </div>
+        <!-- Maharashtra -->
+        <div class="reveal reveal-d1 facility-card">
+          <div
+            style="position:relative;height:240px;border-radius:1rem;overflow:hidden;margin-bottom:1rem;box-shadow:0 8px 24px rgba(10,25,47,0.06)">
+            <div class="facility-img"
+              style="width:100%;height:100%;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80')">
+            </div>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin:0;text-align:center">Maharashtra</h3>
+        </div>
+        <!-- Rajasthan -->
+        <div class="reveal reveal-d2 facility-card">
+          <div
+            style="position:relative;height:240px;border-radius:1rem;overflow:hidden;margin-bottom:1rem;box-shadow:0 8px 24px rgba(10,25,47,0.06)">
+            <div class="facility-img"
+              style="width:100%;height:100%;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800&q=80')">
+            </div>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin:0;text-align:center">Rajasthan</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section class="section-pad" style="background:white">
+    <div class="container-xl">
+      <div style="text-align:center;margin-bottom:3.5rem">
+        <div class="section-label reveal">Quality Standards</div>
+        <h2 class="reveal reveal-d1" style="font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;color:var(--navy)">
+          Certifications &amp; Associations</h2>
+        <p class="reveal reveal-d2"
+          style="font-size:0.88rem;color:var(--gray-600);max-width:480px;margin:0.75rem auto 0;line-height:1.7">We
+          adhere to industry-leading standards and certifications that reflect our commitment to quality and excellence.
+        </p>
+      </div>
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;max-width:760px;margin:0 auto">
+        <div class="cert-card reveal" style="border-radius:0.75rem">
+          <img src="assets/images/Certificates/SGS Certificate.png" alt="SGS Certificate"
+            style="width:100%;height:150px;object-fit:contain;padding:1rem;background:#f8fafc;border-bottom:1px solid #e8edf5">
+          <div style="padding:1rem;text-align:center">
+            <div style="font-weight:700;font-size:0.8rem;color:var(--navy)">SGS Certification</div>
+            <div style="font-size:0.68rem;color:var(--gray-600);margin-top:0.25rem">Quality Management</div>
+          </div>
+        </div>
+        <div class="cert-card reveal reveal-d1" style="border-radius:0.75rem">
+          <img src="assets/images/Certificates/SGS Second Certificate.png" alt="SGS Certificate 2"
+            style="width:100%;height:150px;object-fit:contain;padding:1rem;background:#f8fafc;border-bottom:1px solid #e8edf5">
+          <div style="padding:1rem;text-align:center">
+            <div style="font-weight:700;font-size:0.8rem;color:var(--navy)">SGS Certification II</div>
+            <div style="font-size:0.68rem;color:var(--gray-600);margin-top:0.25rem">Environmental Management</div>
+          </div>
+        </div>
+        <div class="cert-card reveal reveal-d2" style="border-radius:0.75rem">
+          <img src="assets/images/Certificates/SGS Third Certificate.png" alt="SGS Certificate 3"
+            style="width:100%;height:150px;object-fit:contain;padding:1rem;background:#f8fafc;border-bottom:1px solid #e8edf5">
+          <div style="padding:1rem;text-align:center">
+            <div style="font-weight:700;font-size:0.8rem;color:var(--navy)">SGS Certification III</div>
+            <div style="font-size:0.68rem;color:var(--gray-600);margin-top:0.25rem">Product Quality Assurance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer style="padding:4rem 0 2rem">
+    <div class="container-xl">
+      <div
+        style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)"
+        class="reveal">
+        <div>
+          <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys"
+              style="height:55px;width:auto;object-fit:contain;margin-bottom:1.25rem"></a>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the
+            future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
+          <div style="display:flex;align-items:center;gap:0.5rem"><span class="dot-live"></span><span
+              style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase">System
+              Operational</span></div>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Products</div>
+          <a href="products.html" class="footer-link">C-Section Purlins</a>
+          <a href="products.html" class="footer-link">Z Purlins</a>
+          <a href="products.html" class="footer-link">Top Hat Sections</a>
+          <a href="products.html" class="footer-link">LIP Channels</a>
+          <a href="products.html" class="footer-link">ZAM Coated Steel</a>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Company</div>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="solutions.html" class="footer-link">Solutions</a>
+          <a href="clients.html" class="footer-link">Clients</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Contact</div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.75rem">9th Floor, 903,
+            Friends Business Bay, Borivali West, Mumbai 400092</p>
+          <a href="tel:+919987300555" class="footer-link">+91 99873 00555</a>
+          <a href="mailto:sales@bigwinbuildsys.com" class="footer-link">sales@bigwinbuildsys.com</a>
+        </div>
+      </div>
+      <div
+        style="display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem">
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3)">© 2025 Bigwin Buildsys Coated Private Limited. All
+          rights reserved.</p>
+        <a href="index.html"
+          style="font-size:0.7rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.1em">www.bigwinbuildsys.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <style>
+    @media (min-width:1024px) {
+      .lg-grid-2 {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .lg-grid-3-auto {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    /* Footer 4-col responsive */
+    @media (max-width:767px) {
+      footer .container-xl>div:first-child {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (min-width:768px) and (max-width:1023px) {
+      footer .container-xl>div:first-child {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+  </style>
+</body>
+
+</html>

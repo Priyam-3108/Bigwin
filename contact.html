@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Bigwin Buildsys</title>
+  <meta name="description"
+    content="Get in touch with Bigwin Buildsys: Mumbai headquarters, Gujarat and Rajasthan plants. Call +91 99873 00555 or email sales@bigwinbuildsys.com.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.875rem 1.25rem;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--gray-800);
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.07);
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    @media (max-width:767px) {
+      footer .container-xl>div:first-child {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (min-width:768px) and (max-width:1023px) {
+      footer .container-xl>div:first-child {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    /* White Navbar Overrides */
+    #main-nav.nav-glass {
+      background: #ffffff !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    #main-nav.nav-glass.scrolled {
+      background: #ffffff !important;
+      box-shadow: 0 4px 20px rgba(10, 25, 47, 0.08) !important;
+    }
+
+    #main-nav .nav-link {
+      color: rgba(10, 25, 47, 0.70) !important;
+      font-size: 0.85rem !important;
+      letter-spacing: 0.15em !important;
+    }
+
+    #main-nav .nav-link:hover,
+    #main-nav .nav-link.active {
+      color: var(--navy) !important;
+    }
+
+    #main-nav .nav-link::after {
+      background: var(--navy) !important;
+    }
+
+    #main-nav #mobile-open svg {
+      stroke: var(--navy) !important;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="assets/images/bigwin.ico">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav" class="nav-glass" style="position:fixed;top:0;left:0;right:0;z-index:50;height:96px">
+    <div class="container-xl" style="display:flex;align-items:center;justify-content:space-between;height:100%">
+      <a href="index.html" style="display:flex;align-items:center;height:100%;text-decoration:none">
+        <img src="assets/images/bigwin.png" alt="Bigwin Buildsys" style="height:76px;width:auto;object-fit:contain">
+      </a>
+      <div style="display:flex;gap:2rem;align-items:center" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="solutions.html" class="nav-link">Solutions</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="clients.html" class="nav-link">Clients</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </div>
+
+      <div style="display:flex;gap:1rem;align-items:center">
+        <a href="contact.html" class="btn-gold"><span>Request Quote</span></a>
+        <button id="mobile-open" style="background:none;border:none;cursor:pointer;display:none"><svg width="24"
+            height="24" fill="none" stroke="white" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg></button>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-overlay">
+    <button id="mobile-close"
+      style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer"><svg width="28"
+        height="28" fill="none" stroke="white" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg></button>
+    <a href="index.html">Home</a><a href="products.html">Products</a><a href="solutions.html">Solutions</a><a
+      href="about.html">About Us</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="page-hero" style="padding-top:96px;min-height:720px">
+    <div class="page-hero-bg"
+      style="background-image:url('assets/images/Untitled-1-26.png');background-position:center 40%"></div>
+    <div class="page-hero-grad"></div>
+    <div class="container-xl" style="position:relative;z-index:1;width:100%;padding-bottom:1rem">
+      <div class="fade-up">
+        <div class="section-label">Reach Out</div>
+      </div>
+      <h1 class="fade-up fade-up-d1"
+        style="font-size:clamp(2.5rem,6vw,5rem);font-weight:300;letter-spacing:-0.05em;color:white;line-height:0.95;margin-bottom:1.25rem">
+        Let's Build<br><span class="gradient-text-gold">Together</span>
+      </h1>
+      <p class="fade-up fade-up-d2" style="font-size:1rem;color:rgba(255,255,255,0.65);max-width:440px;line-height:1.7">
+        Whether it's a quote, a technical question, or a partnership, we're ready to talk.</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section style="background:var(--off-white);padding:5rem 0;position:relative;overflow:hidden">
+    <!-- Floating Background Watermark on Right Edge -->
+    <div
+      style="position:absolute;right:-50px;bottom:120px;width:750px;opacity:0.18;pointer-events:none;z-index:0;filter:grayscale(100%)">
+      <img src="assets/images/ZAM Coated Steel.png" alt="ZAM Coated Steel" style="width:100%;height:auto;display:block">
+    </div>
+    <div class="container-xl" style="position:relative;z-index:1">
+      <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:start" class="lg-grid-contact">
+        <!-- FORM -->
+        <div class="reveal">
+          <div style="background:white;border:1px solid #e8edf5;border-radius:1.5rem;padding:3rem">
+            <h2 style="font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:0.5rem">Send an Inquiry</h2>
+            <p style="font-size:0.82rem;color:var(--gray-600);margin-bottom:2.5rem;line-height:1.6">Fill in the details
+              below and our team will respond within 24 hours.</p>
+            <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Your Company Ltd." required>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="product">Product / Service Interest</label>
+                <select id="product" name="product">
+                  <option value="">Select a product or service…</option>
+                  <option>C-Section Purlins</option>
+                  <option>Z Purlins</option>
+                  <option>Top Hat Sections</option>
+                  <option>LIP Channels</option>
+                  <option>Equal Angle Sections</option>
+                  <option>Multi Beam Sections</option>
+                  <option>Solar Tracker Components</option>
+                  <option>Pre-Engineered Buildings (PEB)</option>
+                  <option>ZAM Coated Steel Coils</option>
+                  <option>Full Width &amp; Slitted Coils</option>
+                  <option>Other Products</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Project Details / Message</label>
+                <textarea id="message" name="message"
+                  placeholder="Please describe your project requirements, quantity, delivery location, and timeline…"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn-gold"
+                style="width:100%;justify-content:center;padding:1.1rem;font-size:0.75rem">
+                <span>Send Inquiry</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+              <div id="formSuccess"
+                style="display:none;margin-top:1.5rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.75rem;padding:1.25rem;text-align:center">
+                <div style="font-weight:700;color:#16a34a;font-size:0.9rem;margin-bottom:0.25rem">✓ Inquiry Sent
+                  Successfully!</div>
+                <div style="font-size:0.8rem;color:#15803d">Our team will respond within 24 business hours.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="reveal reveal-d1">
+          <!-- HQ -->
+          <div
+            style="background:var(--navy);border-radius:1.25rem;padding:2.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden">
+            <div
+              style="position:absolute;top:-24px;right:-24px;width:120px;height:120px;background:rgba(212,175,55,0.06);border-radius:50%">
+            </div>
+            <div class="section-label" style="margin-bottom:1.25rem">Headquarters</div>
+            <h3 style="font-size:1.1rem;font-weight:800;color:white;margin-bottom:0.75rem">Mumbai Office</h3>
+            <div style="display:flex;flex-direction:column;gap:0.875rem">
+              <div style="display:flex;gap:0.875rem;align-items:flex-start">
+                <div style="flex-shrink:0;margin-top:0.125rem">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="overflow:visible">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;margin-top: auto;">9th Floor,
+                  Office 903, Friends Business Bay, Near Akshara School, Borivali West, Mumbai 400 092</p>
+              </div>
+              <div style="display:flex;gap:0.875rem;align-items:center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="overflow:visible">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z" />
+                </svg>
+                <a href="tel:+919987300555"
+                  style="font-size:0.88rem;color:white;text-decoration:none;font-weight:600">+91 99873 00555</a>
+              </div>
+              <div style="display:flex;gap:0.875rem;align-items:center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="overflow:visible">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:sales@bigwinbuildsys.com"
+                  style="font-size:0.82rem;color:rgba(255,255,255,0.7);text-decoration:none">sales@bigwinbuildsys.com</a>
+              </div>
+              <div style="display:flex;gap:0.875rem;align-items:center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" style="overflow:visible">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:admin@bigwinbuildsys.com"
+                  style="font-size:0.82rem;color:rgba(255,255,255,0.7);text-decoration:none">admin@bigwinbuildsys.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <section style="background:white;padding:0 0 5rem 0">
+    <div class="container-xl">
+      <div
+        style="background:var(--off-white);border:1px solid #e8edf5;border-radius:1.5rem;overflow:hidden;height:420px;position:relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.0!2d72.8569!3d19.2294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sBorivali+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;filter:grayscale(0.3)" allowfullscreen="" loading="lazy"></iframe>
+        <div
+          style="position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(10,25,47,0.95);backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,0.2);border-radius:0.875rem;padding:1.25rem;min-width:250px">
+          <div
+            style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:0.5rem">
+            HQ Location</div>
+          <div style="font-weight:700;color:white;font-size:0.9rem">Borivali West, Mumbai</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem">9th Floor, Friends Business Bay
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <footer style="padding:4rem 0 2rem">
+    <div class="container-xl">
+      <div
+        style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)"
+        class="reveal">
+        <div>
+          <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys"
+              style="height:55px;width:auto;object-fit:contain;margin-bottom:1.25rem"></a>
+          <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the
+            future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
+          <div style="display:flex;align-items:center;gap:0.5rem"><span class="dot-live"></span><span
+              style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase">System
+              Operational</span></div>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Products</div>
+          <a href="products.html" class="footer-link">C-Section Purlins</a>
+          <a href="products.html" class="footer-link">Z Purlins</a>
+          <a href="products.html" class="footer-link">Top Hat Sections</a>
+          <a href="products.html" class="footer-link">LIP Channels</a>
+          <a href="products.html" class="footer-link">ZAM Coated Steel</a>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Company</div>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="solutions.html" class="footer-link">Solutions</a>
+          <a href="clients.html" class="footer-link">Clients</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div>
+          <div
+            style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">
+            Contact</div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.75rem">9th Floor, 903,
+            Friends Business Bay, Borivali West, Mumbai 400092</p>
+          <a href="tel:+919987300555" class="footer-link">+91 99873 00555</a>
+          <a href="mailto:sales@bigwinbuildsys.com" class="footer-link">sales@bigwinbuildsys.com</a>
+        </div>
+      </div>
+      <div
+        style="display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem">
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3)">&copy; 2025 Bigwin Buildsys Coated Private Limited. All
+          rights reserved.</p>
+        <a href="index.html"
+          style="font-size:0.7rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.1em">www.bigwinbuildsys.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('contactForm').reset();
+      document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+  <style>
+    @media (max-width:767px) {
+      #nav-links {
+        display: none !important;
+      }
+
+      #mobile-open {
+        display: block !important;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .lg-grid-contact {
+        grid-template-columns: 1.2fr 1fr !important;
+      }
+    }
+
+    @media (max-width:480px) {
+      .contact-form form>div:first-child {
+        grid-template-columns: 1fr !important;
+      }
+
+      .contact-form form>div:nth-child(4) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</body>
+
+</html>
