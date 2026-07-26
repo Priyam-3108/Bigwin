@@ -20,7 +20,6 @@ const FULL_FOOTER = `<!-- FOOTER -->
       <div>
         <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">Company</div>
         <a href="about.html" class="footer-link">About Us</a>
-        <a href="solutions.html" class="footer-link">Solutions</a>
         <a href="achievements.html" class="footer-link">Achievements</a>
         <a href="clients.html" class="footer-link">Clients</a>
         <a href="contact.html" class="footer-link">Contact</a>
@@ -43,7 +42,7 @@ const FOOTER_RESPONSIVE = `
   @media (max-width:767px) { footer .container-xl > div:first-child { grid-template-columns: 1fr !important; } }
   @media (min-width:768px) and (max-width:1023px) { footer .container-xl > div:first-child { grid-template-columns: 1fr 1fr !important; } }`;
 
-const files = ['solutions.html', 'achievements.html', 'clients.html', 'contact.html'];
+const files = ['achievements.html', 'clients.html', 'contact.html'];
 
 files.forEach(f => {
   let c = fs.readFileSync(f, 'utf8');
