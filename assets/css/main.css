@@ -484,6 +484,7 @@ footer { background: var(--navy-deep); }
   position: relative;
   overflow: hidden;
   background: var(--navy-deep);
+  height: 100vh;
 }
 .page-hero-bg {
   position: absolute;
