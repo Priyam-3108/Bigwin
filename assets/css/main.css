@@ -589,3 +589,12 @@ footer div[style*="border-bottom"] {
 footer div[style*="color:var(--gold)"] {
   color: var(--navy) !important;
 }
+
+/* ── Title Typography Highlights ── */
+.title-bold {
+  font-weight: 800 !important;
+}
+.title-thin {
+  font-weight: 300 !important;
+}
+
