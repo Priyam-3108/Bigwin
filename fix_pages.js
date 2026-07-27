@@ -26,7 +26,7 @@ const FULL_FOOTER = `<!-- FOOTER -->
         <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">Contact</div>
         <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.75rem">9th Floor, 903, Friends Business Bay, Borivali West, Mumbai 400092</p>
         <a href="tel:+919987300555" class="footer-link">+91 99873 00555</a>
-        <a href="mailto:sales@bigwinbuildsys.com" class="footer-link">sales@bigwinbuildsys.com</a>
+        <a href="mailto:info@spanoindustry.com" class="footer-link">info@spanoindustry.com</a>
       </div>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem">
