@@ -373,9 +373,56 @@
   <script>
     function submitForm(e) {
       e.preventDefault();
-      document.getElementById('formSuccess').style.display = 'block';
-      document.getElementById('contactForm').reset();
-      document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      const form = e.target;
+      const button = form.querySelector('button[type="submit"]');
+      const originalText = button.innerHTML;
+      
+      // Show sending state
+      button.disabled = true;
+      button.innerHTML = '<span>Sending...</span>';
+      
+      // CONFIGURATION: Replace this with your Web3Forms Access Key
+      const ACCESS_KEY = "2a6bc4c0-9b5a-4d31-9791-be40d412d600"; 
+      
+      const data = {
+        access_key: ACCESS_KEY,
+        subject: "New Web Inquiry | " + form.company.value + " - " + form.product.value,
+        from_name: "Bigwin Buildsys Website",
+        "First Name": form.fname.value,
+        "Last Name": form.lname.value,
+        "Company": form.company.value,
+        "Email": form.email.value,
+        "Phone": form.phone.value,
+        "Product Interest": form.product.value,
+        "Message": form.message.value
+      };
+      
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(resData => {
+        button.disabled = false;
+        button.innerHTML = originalText;
+        if (resData.success) {
+          document.getElementById('formSuccess').style.display = 'block';
+          form.reset();
+          document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          alert("Submission failed: " + (resData.message || "Please check your access key."));
+        }
+      })
+      .catch(error => {
+        button.disabled = false;
+        button.innerHTML = originalText;
+        alert("An error occurred: " + error.message);
+      });
     }
   </script>
   <style>
