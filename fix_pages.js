@@ -5,9 +5,8 @@ const FULL_FOOTER = `<!-- FOOTER -->
   <div class="container-xl">
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)" class="reveal">
       <div>
-        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.25rem;color:white;margin-bottom:1rem">BIGWIN<span style="color:var(--gold);font-weight:300"> BUILDSYS</span></div>
+        <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys" style="height:70px;width:auto;object-fit:contain;"></a>
         <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
-        <div style="display:flex;align-items:center;gap:0.5rem"><span class="dot-live"></span><span style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase">System Operational</span></div>
       </div>
       <div>
         <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">Products</div>
@@ -20,7 +19,6 @@ const FULL_FOOTER = `<!-- FOOTER -->
       <div>
         <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1.25rem">Company</div>
         <a href="about.html" class="footer-link">About Us</a>
-        <a href="achievements.html" class="footer-link">Achievements</a>
         <a href="clients.html" class="footer-link">Clients</a>
         <a href="contact.html" class="footer-link">Contact</a>
       </div>
@@ -42,7 +40,7 @@ const FOOTER_RESPONSIVE = `
   @media (max-width:767px) { footer .container-xl > div:first-child { grid-template-columns: 1fr !important; } }
   @media (min-width:768px) and (max-width:1023px) { footer .container-xl > div:first-child { grid-template-columns: 1fr 1fr !important; } }`;
 
-const files = ['achievements.html', 'clients.html', 'contact.html'];
+const files = ['about.html', 'clients.html', 'contact.html'];
 
 files.forEach(f => {
   let c = fs.readFileSync(f, 'utf8');

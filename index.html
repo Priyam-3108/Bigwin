@@ -46,7 +46,8 @@
     }
 
     .hero-home {
-      min-height: 720px;
+      height: 100vh;
+      min-height: 650px;
       padding-top: 96px;
       position: relative;
       display: flex;
@@ -58,7 +59,7 @@
     .hero-home-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1800&q=80');
+      background-image: url('assets/images/herosection bg.png');
       background-size: cover;
       background-position: center;
     }
@@ -227,6 +228,26 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media (min-width: 1024px) {
+      .zam-img-col {
+        max-width: none !important;
+        height: 100%;
+        min-height: 480px;
+      }
+      .zam-breakout-img {
+        position: absolute !important;
+        left: calc(100% - 50vw) !important;
+        right: auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) scale(1.6) !important;
+        transform-origin: left center !important;
+        width: 50vw !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block !important;
+      }
+    }
   </style>
 </head>
 
@@ -345,7 +366,7 @@
       <div class="grid-3" style="gap:2rem">
         <!-- Card 1: SOLAR MODULE MOUNTING SOLUTIONS -->
         <div class="arch-card reveal">
-          <img src="assets/images/Strength and Stability.png" alt="Solar Module Mounting Solutions">
+          <img src="assets/images/SOLAR MODULE MOUNTING SOLUTIONS.png" alt="Solar Module Mounting Solutions" style="object-position: left center;height: 66%;">
           <div class="arch-card-overlay">
             <div class="arch-glass-content">
               <div class="section-label" style="font-size:0.58rem;margin-bottom:0.35rem">Foundations</div>
@@ -356,7 +377,7 @@
         </div>
         <!-- Card 2: Trackers -->
         <div class="arch-card reveal reveal-d1">
-          <img src="assets/images/Solar Tracker Components.png" alt="Solar Tracker Components">
+          <img src="assets/images/Solar_Tracker_Components-trasprent.png" alt="Solar Tracker Components">
           <div class="arch-card-overlay">
             <div class="arch-glass-content">
               <div class="section-label" style="font-size:0.58rem;margin-bottom:0.35rem">Mechanics</div>
@@ -367,7 +388,7 @@
         </div>
         <!-- Card 3: PEB Solutions -->
         <div class="arch-card reveal reveal-d2">
-          <img src="assets/images/PEB Solution.png" alt="Pre-Engineered Buildings">
+          <img src="assets/images/Untitddled-1-04.jpeg" alt="Pre-Engineered Buildings">
           <div class="arch-card-overlay">
             <div class="arch-glass-content">
               <div class="section-label" style="font-size:0.58rem;margin-bottom:0.35rem">Structures</div>
@@ -387,12 +408,9 @@
     </div>
     <div class="container-xl" style="position:relative;z-index:10">
       <div style="display:grid;grid-template-columns:1fr;gap:4rem;align-items:center" class="lg-grid-2">
-        <!-- Left Column: ZAM Image with Border Glow -->
-        <div class="reveal" style="position:relative;max-width:560px;margin:0 auto;width:100%">
-          <div style="position:absolute;inset:-8px;border:2px dashed rgba(212,175,55,0.25);border-radius:1.5rem"></div>
-          <div style="border-radius:1.25rem;overflow:hidden;box-shadow:0 24px 48px rgba(0,0,0,0.4)">
-            <img src="assets/images/ZAM Coated Steel.png" alt="ZAM Coated Steel" style="width:100%;display:block">
-          </div>
+        <!-- Left Column: ZAM Image -->
+        <div class="reveal zam-img-col" style="position:relative;width:100%;">
+          <img src="assets/images/zam coated steel blue.png" alt="ZAM Coated Steel" class="zam-breakout-img" style="width:100%;height:auto;display:block;">
         </div>
         <!-- Right Column: Details and Chemistry Boxes -->
         <div class="reveal reveal-d1">
@@ -553,15 +571,9 @@
         class="reveal">
         <div>
           <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys"
-              style="height:55px;width:auto;object-fit:contain;margin-bottom:1.25rem"></a>
+              style="height:70px;width:auto;object-fit:contain;"></a>
           <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the
             future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
-          <div style="display:flex;align-items:center;gap:0.5rem">
-            <span class="dot-live"></span>
-            <span
-              style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase">System
-              Operational</span>
-          </div>
         </div>
         <div>
           <div

@@ -94,8 +94,8 @@
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />
       </svg></button>
-    <a href="index.html">Home</a><a href="products.html">Products</a><a
-      href="about.html">About Us</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+    <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About Us</a><a
+      href="clients.html">Clients</a><a href="contact.html">Contact</a>
     <a href="contact.html" class="btn-gold" style="margin-top:1rem"><span>Request Quote</span></a>
   </div>
 
@@ -231,17 +231,23 @@
             Our Values</div>
           <div style="display:flex;flex-direction:column;gap:0.625rem">
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Responsibility towards sustainability</div>
+              <span>→</span>Responsibility towards sustainability
+            </div>
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Integrity in every action</div>
+              <span>→</span>Integrity in every action
+            </div>
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Commitment to quality</div>
+              <span>→</span>Commitment to quality
+            </div>
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Innovation in engineering</div>
+              <span>→</span>Innovation in engineering
+            </div>
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Customer-first approach</div>
+              <span>→</span>Customer-first approach
+            </div>
             <div style="font-size:0.82rem;font-weight:600;color:var(--navy);display:flex;gap:0.5rem">
-              <span>→</span>Excellence in execution</div>
+              <span>→</span>Excellence in execution
+            </div>
           </div>
         </div>
       </div>
@@ -462,6 +468,8 @@
   </section>
 
   <!-- ═══ FOOTER ═══ -->
+  <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer style="padding:4rem 0 2rem">
     <div class="container-xl">
       <div
@@ -469,12 +477,9 @@
         class="reveal">
         <div>
           <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys"
-              style="height:55px;width:auto;object-fit:contain;margin-bottom:1.25rem"></a>
+              style="height:70px;width:auto;object-fit:contain;"></a>
           <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the
             future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
-          <div style="display:flex;align-items:center;gap:0.5rem"><span class="dot-live"></span><span
-              style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase">System
-              Operational</span></div>
         </div>
         <div>
           <div
@@ -506,7 +511,7 @@
       </div>
       <div
         style="display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem">
-        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3)">© 2025 Bigwin Buildsys Coated Private Limited. All
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3)">&copy; 2025 Bigwin Buildsys Coated Private Limited. All
           rights reserved.</p>
         <a href="index.html"
           style="font-size:0.7rem;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.1em">www.bigwinbuildsys.com</a>
@@ -515,7 +520,126 @@
   </footer>
 
   <script src="assets/js/app.js"></script>
+  
+  <!-- Certification Modal -->
+  <div id="certModal" class="cert-modal">
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" id="closeCertModal">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img id="certModalImg" src="" alt="Certificate View">
+      <div id="certModalTitle" style="text-align:center;font-weight:800;color:var(--navy);margin-top:1rem;font-size:1.1rem;font-family:var(--font-head)"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.cert-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const imgSrc = card.querySelector('img').getAttribute('src');
+        const title = card.querySelector('div > div:first-child').innerText;
+        
+        const modal = document.getElementById('certModal');
+        const modalImg = document.getElementById('certModalImg');
+        const modalTitle = document.getElementById('certModalTitle');
+        
+        modalImg.setAttribute('src', imgSrc);
+        modalTitle.innerText = title;
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeModal = () => {
+      const modal = document.getElementById('certModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    document.getElementById('closeCertModal').addEventListener('click', closeModal);
+    document.getElementById('certModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('certModal')) {
+        closeModal();
+      }
+    });
+  </script>
+
   <style>
+    /* Modal styles */
+    .cert-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 25, 47, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .cert-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    .cert-modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+      transform: scale(0.9);
+      transition: transform 0.3s var(--ease-spring);
+    }
+    .cert-modal.active .cert-modal-content {
+      transform: scale(1);
+    }
+    .cert-modal img {
+      max-width: 100%;
+      max-height: 70vh;
+      display: block;
+      border-radius: 0.75rem;
+      object-fit: contain;
+    }
+    .cert-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--gold);
+      border: none;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+    .cert-modal-close:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 767px) {
+      .cert-modal-content {
+        padding: 1rem;
+      }
+      .cert-modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+    }
+
     @media (min-width:1024px) {
       .lg-grid-2 {
         grid-template-columns: 1fr 1fr !important;
