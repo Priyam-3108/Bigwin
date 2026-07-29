@@ -5,7 +5,7 @@ const FULL_FOOTER = `<!-- FOOTER -->
   <div class="container-xl">
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.08)" class="reveal">
       <div>
-        <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.png" alt="Bigwin Buildsys" style="height:70px;width:auto;object-fit:contain;"></a>
+        <a href="index.html" style="display:inline-block"><img src="assets/images/bigwin.webp" alt="Bigwin Buildsys" style="height:70px;width:auto;object-fit:contain;"></a>
         <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:1.25rem">Forging the future of solar infrastructure through precision steel engineering and manufacturing excellence.</p>
       </div>
       <div>
