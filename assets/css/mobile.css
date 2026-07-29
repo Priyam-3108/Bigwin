@@ -1,0 +1,1169 @@
+/* ═══════════════════════════════════════════════════════════════
+   BIGWIN BUILDSYS — MOBILE RESPONSIVE STYLES
+   Append-only. Zero desktop rules modified.
+   Targets: max-width 768px (tablet/phone) + 480px (small phone)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   §1  GLOBAL / BASE
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Prevent horizontal overflow on every page */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Images never escape their container */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Buttons go full-width on small screens */
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  /* Section padding reduced */
+  .section-pad {
+    padding: 4rem 0;
+  }
+
+  /* Container side-padding tightened */
+  .container-xl {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §2  NAVIGATION BAR
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Slim navbar to 64px — saves hero real-estate */
+  #main-nav {
+    height: 64px !important;
+  }
+
+  /* Inner container: tighter horizontal padding */
+  #main-nav .container-xl {
+    padding: 0 1rem;
+  }
+
+  /* Logo: scale down proportionally */
+  #main-nav img[alt="Bigwin Buildsys"] {
+    height: 40px !important;
+  }
+
+  /* Hide the desktop CTA button — it lives in the overlay */
+  #main-nav .btn-gold {
+    display: none !important;
+  }
+
+  /* Hamburger button: always visible, correct size */
+  #mobile-open {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+  }
+
+  /* Hamburger SVG: slightly smaller icon */
+  #mobile-open svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §3  MOBILE OVERLAY MENU
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Full-screen overlay: tighter gap + comfortable padding */
+  #mobile-overlay {
+    gap: 0.75rem;
+    padding: 1.5rem 2rem;
+  }
+
+  /* Nav links: compact, readable — NOT oversized */
+  #mobile-overlay a:not(.btn-gold) {
+    font-size: 0.9rem !important;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Close button positioning */
+  #mobile-close {
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+
+  /* Quote CTA button inside overlay: reasonable size */
+  #mobile-overlay .btn-gold {
+    display: inline-flex !important;
+    width: auto !important;
+    margin-top: 1rem;
+    font-size: 0.65rem !important;
+    padding: 0.8rem 2rem !important;
+    letter-spacing: 0.18em !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #mobile-overlay a:not(.btn-gold) {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 0;
+  }
+
+  #mobile-overlay .btn-gold {
+    font-size: 0.6rem !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §4  HERO SECTIONS  (index + page heroes)
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Index home hero */
+  .hero-home {
+    min-height: 100svh !important;
+    padding-top: 64px !important;
+    padding-bottom: 3rem !important;
+    align-items: flex-end;
+  }
+
+  /* FIX 1: "Solar Mounting Solutions" has white-space:nowrap inline —
+     override so it wraps instead of cutting off */
+  .hero-home h1 span[style*="white-space:nowrap"],
+  .hero-home h1 .title-bold {
+    white-space: normal !important;
+  }
+
+  /* FIX 2: Hero content box — let it breathe, don't constrain max-width */
+  .hero-home .container-xl>div {
+    max-width: 100% !important;
+  }
+
+  /* Page heroes (about / products / contact / clients) */
+  .page-hero {
+    min-height: 380px !important;
+    height: auto !important;
+    padding-top: 64px !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Kill fixed attachment on mobile (GPU performance + iOS bug) */
+  .hero-bg,
+  .hero-home-bg {
+    background-attachment: scroll !important;
+  }
+
+  /* Hide scroll indicator — wastes space on mobile */
+  .animate-float {
+    display: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §5  GRID UTILITIES
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §6  FOOTER
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Outer footer padding */
+  footer {
+    padding: 2rem 0 1.25rem !important;
+  }
+
+  /* 4-col grid → compact 2-col layout on mobile */
+  footer .container-xl>div[style*="grid-template-columns:2fr 1fr 1fr 1fr"],
+  footer .container-xl>div:first-child {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.25rem 1rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Brand Column (Logo + Tagline): spans full width (2 cols) */
+  footer .container-xl>div:first-child > div:nth-child(1) {
+    grid-column: span 2 !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Logo in footer */
+  footer img[alt="Bigwin Buildsys"] {
+    height: 42px !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  /* Footer tagline paragraph */
+  footer p[style*="font-size:0.8rem"] {
+    font-size: 0.72rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.5rem !important;
+    opacity: 0.8 !important;
+  }
+
+  /* Column headings (Products / Company / Contact labels) */
+  footer div[style*="letter-spacing:0.2em"] {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Footer links */
+  .footer-link {
+    font-size: 0.72rem !important;
+    padding: 0.15rem 0 !important;
+    display: block !important;
+  }
+
+  /* Contact column (4th div): spans full width for clean reading */
+  footer .container-xl>div:first-child > div:nth-child(4) {
+    grid-column: span 2 !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* Contact column: address text */
+  footer p[style*="font-size:0.78rem"] {
+    font-size: 0.7rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  /* Bottom bar (copyright + URL): stack vertically with small gap */
+  footer .container-xl>div:last-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.35rem !important;
+    padding-top: 1rem !important;
+  }
+
+  /* Copyright text */
+  footer .container-xl>div:last-child p {
+    font-size: 0.62rem !important;
+  }
+
+  /* Website URL link */
+  footer .container-xl>div:last-child a {
+    font-size: 0.65rem !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §7  INDEX PAGE — SPECIFIC SECTIONS
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── ZAM image column: hidden on mobile (breaks alignment) ── */
+  .zam-img-col,
+  .zam-breakout-img {
+    display: none !important;
+  }
+
+  /* ── ZAM section: collapse inline grid gap from 4rem → 1.5rem ── */
+  div[style*="display:grid"][style*="gap:4rem"][style*="align-items:center"] {
+    gap: 1.5rem !important;
+  }
+
+  /* ── ZAM Chemistry grid: keep 3-col horizontal on mobile
+     (compact element boxes fit side by side at small size) ── */
+  .zam-chemistry-grid,
+  div.zam-chemistry-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Chemistry box: tighten inner padding */
+  .chem-box {
+    padding: 0.75rem 0.5rem !important;
+    border-radius: 0.625rem !important;
+  }
+
+  /* Zn / Al / Mg symbol size */
+  .chem-box>div:first-child {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  /* Element name label (ZINC 91% etc.) */
+  .chem-box>div:nth-child(2) {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  /* Element description text */
+  .chem-box>div:nth-child(3) {
+    font-size: 0.55rem !important;
+    margin-top: 0.25rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* ── Bullet list (Self-Healing / ROI) ── */
+  div[style*="display:flex;flex-direction:column;gap:1rem;margin-top:2rem"] {
+    gap: 0.625rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Bullet row font size */
+  div[style*="display:flex;align-items:center;gap:0.75rem;color:rgba(255,255,255,0.75);font-size:0.85rem"] {
+    font-size: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+
+  /* ── "Explore Products" button wrapper ── */
+  div[style*="margin-top:2.5rem"] {
+    margin-top: 1.25rem !important;
+  }
+
+  /* ── Marquee: reduce tile width ── */
+  .marquee-track .client-tile {
+    width: 150px !important;
+  }
+
+  /* ── Section header flex row (title + Full Catalog link): stack ── */
+  .container-xl>div[style*="justify-content:space-between"][style*="align-items:flex-end"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* ── Arch cards ── */
+  .arch-card {
+    height: 280px !important;
+  }
+
+  /* ── CTA box inside navy section ── */
+  div[style*="background:var(--navy)"][style*="border-radius:1.5rem"] {
+    padding: 2.5rem 1.25rem !important;
+    border-radius: 1rem !important;
+  }
+
+  /* CTA button group: stack vertically */
+  div[style*="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §8  PRODUCTS PAGE — SPECIFIC SECTIONS
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Product card grid → single column ── */
+  section[style*="background:var(--off-white)"] div[style*="grid-template-columns:repeat(auto-fill"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* ── Product card image: reduced height, contain so full product is visible ── */
+  .product-card .img-wrap {
+    height: 150px !important;
+    padding: 0.75rem !important;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-card .img-wrap img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* ── Product card inner padding ── */
+  .product-card>div[style*="padding:2rem"] {
+    padding: 1.25rem !important;
+  }
+
+  /* ── Tech spec box inside card ── */
+  .product-card div[style*="background:#f8fafc"][style*="padding:1.25rem"] {
+    padding: 0.875rem !important;
+  }
+
+  /* ── Spec rows: key + val font reduction ── */
+  .spec-row {
+    font-size: 0.7rem !important;
+    gap: 0.25rem !important;
+    flex-wrap: wrap;
+    padding: 0.3rem 0 !important;
+  }
+
+  .spec-row .key {
+    font-size: 0.68rem !important;
+    min-width: 90px;
+  }
+
+  .spec-row .val {
+    font-size: 0.68rem !important;
+  }
+
+  /* ── Intro banner: stack quote + stats vertically ── */
+  section[style*="background:var(--navy)"][style*="padding:2rem"] .container-xl {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1.25rem !important;
+  }
+
+  section[style*="background:var(--navy)"][style*="padding:2rem"] p {
+    font-size: 0.78rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Stat badges: keep horizontal row but tighter gap */
+  section[style*="background:var(--navy)"][style*="padding:2rem"] div[style*="display:flex;gap:2.5rem"] {
+    gap: 1.5rem !important;
+    flex-wrap: wrap;
+  }
+
+  /* Intro stat numbers */
+  div[style*="font-size:1.75rem;font-weight:900;color:var(--gold)"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* ── Solar Tracker + PEB: switch to grid on mobile so display: contents works ── */
+  .section-pad>.container-xl>.lg-grid-2 {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Make the text column wrapper transparent to layout (children become direct grid items)
+     EXCLUDE .premium-test-card so testimonial cards on clients.html retain their box styling! */
+  .section-pad>.container-xl>.lg-grid-2>div.reveal:not(.premium-test-card):not([style*="border-radius:1.25rem"]) {
+    display: contents !important;
+  }
+
+  /* Assign order to all elements so they layout:
+     1. section-label
+     2. h2 heading
+     3. p paragraph(s)
+     4. Image wrapper
+     5. Stats grid (Tracker) / value badges (PEB)
+     6. Enquire/Explore button wrapper */
+
+  .section-pad>.container-xl>.lg-grid-2>.section-label {
+    order: 1 !important;
+  }
+
+  .section-pad>.container-xl>.lg-grid-2>h2 {
+    order: 2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .section-pad>.container-xl>.lg-grid-2>p {
+    order: 3 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Image wrapper gets placed after text but before stats/buttons */
+  .section-pad>.container-xl>.lg-grid-2>div[style*="border-radius:1.25rem"][style*="overflow:hidden"] {
+    order: 4 !important;
+    width: 100% !important;
+    border-radius: 0.875rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Image size inside wrapper */
+  .section-pad>.container-xl>.lg-grid-2>div[style*="border-radius:1.25rem"][style*="overflow:hidden"] img {
+    height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  /* ── Stats container (Tracker) & Value badges container (PEB) ── */
+  .section-pad>.container-xl>.lg-grid-2>div[style*="grid-template-columns:1fr 1fr"],
+  .section-pad>.container-xl>.lg-grid-2>div[style*="display:flex;flex-direction:column;gap:0.625rem"] {
+    order: 5 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* ── Buttons / Wrapper divs ── */
+  .section-pad>.container-xl>.lg-grid-2>a.btn-gold,
+  .section-pad>.container-xl>.lg-grid-2>div[style*="margin-top:2.5rem"] {
+    order: 6 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* ── Tracker stat boxes 2×2: reduce inner padding ── */
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:0.875rem"]>div {
+    padding: 0.875rem 0.75rem !important;
+    border-radius: 0.625rem !important;
+  }
+
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:0.875rem"] div[style*="font-size:1.35rem"] {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    white-space: normal !important;
+  }
+
+  div[style*="display:grid;grid-template-columns:1fr 1fr;gap:0.875rem"] div[style*="font-size:0.72rem"] {
+    font-size: 0.62rem !important;
+  }
+
+  /* ── Value badges (PEB section) ── */
+  .value-badge {
+    font-size: 0.72rem !important;
+    padding: 0.5rem 0.875rem !important;
+  }
+
+  /* ── Other products: 2-col grid ── */
+  .other-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  /* ── Other card: restore original style (centered, contain) in 2-col grid ── */
+  .other-card {
+    padding: 1rem 0.75rem 0.875rem !important;
+    border-radius: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .other-card img {
+    width: 65% !important;
+    height: 100px !important;
+    object-fit: contain !important;
+    border-radius: 0.5rem !important;
+    margin: 0 auto 0.625rem !important;
+    display: block !important;
+  }
+
+  .other-card>div[style*="font-weight:700"] {
+    font-size: 0.7rem !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  /* ── Section margin-bottom tightened on product section header ── */
+  section[style*="background:var(--off-white)"] div[style*="text-align:center;margin-bottom:4rem"] {
+    margin-bottom: 2rem !important;
+  }
+
+  section[style*="background:var(--off-white)"] div[style*="text-align:center;margin-bottom:3.5rem"] {
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Other products: stay 2-col even on small phones — cards are compact enough */
+  .other-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Other products 480px: slightly smaller image */
+  .other-card img {
+    height: 80px !important;
+    width: 60% !important;
+  }
+
+  /* Spec row even smaller */
+  .spec-row .key,
+  .spec-row .val {
+    font-size: 0.62rem !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §9  ABOUT PAGE — SPECIFIC SECTIONS
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Our Company 2×2 Stat Grid ── */
+  /* Target the 2×2 grid container in About intro */
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] {
+    gap: 0.75rem !important;
+  }
+
+  /* Stat boxes inner padding: reduce from 2rem to 1rem 0.625rem */
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"]>div {
+    padding: 1.125rem 0.625rem !important;
+    border-radius: 0.875rem !important;
+  }
+
+  /* Stat numbers (6GW, 1,00,000+ MT, 1,00,000, 3): scale font sizes so they don't wrap/overflow */
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] div[style*="font-size:2.2rem"],
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] div[style*="font-size:1.85rem"],
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] div[style*="font-size:2rem"],
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] div[style*="font-size:2.5rem"] {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+
+  /* Stat labels below numbers */
+  .reveal-d1>div[style*="display:grid;grid-template-columns:1fr 1fr"] div[style*="letter-spacing:0.15em"] {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.08em !important;
+    margin-top: 0.35rem !important;
+  }
+
+  /* ── Mission / Vision / Values Cards ── */
+  /* Reduce excessive padding from 3rem to 1.5rem 1.25rem */
+  .lg-grid-3-auto>div {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 1rem !important;
+  }
+
+  /* Mission/Vision/Values Icon wrapper */
+  .lg-grid-3-auto>div>div[style*="width:48px;height:48px"] {
+    margin-bottom: 1rem !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Paragraph line-height inside Mission/Vision */
+  .lg-grid-3-auto p {
+    font-size: 0.82rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ── Timeline (Journey of Growth) — Desktop-style alternating 3-col layout scaled for mobile ── */
+  .timeline-item {
+    display: grid !important;
+    grid-template-columns: 1fr 24px 1fr !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Show the central timeline line & dot */
+  .timeline-line {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .timeline-item>div:nth-child(2) {
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .timeline-dot {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: var(--gold) !important;
+  }
+
+  /* Year text size & spacing on mobile */
+  .timeline-item div[style*="color:var(--gold)"] {
+    font-size: 1.1rem !important;
+  }
+
+  .timeline-item p[style*="font-size:0.78rem"] {
+    font-size: 0.6rem !important;
+    line-height: 1.3 !important;
+    margin-top: 0.2rem !important;
+  }
+
+  /* Detail Card styling on mobile timeline */
+  .timeline-item div[style*="border-radius:0.875rem"] {
+    padding: 0.625rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+  }
+
+  .timeline-item div[style*="font-size:0.88rem"] {
+    font-size: 0.68rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .timeline-item div[style*="font-size:0.75rem"] {
+    font-size: 0.58rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* ── Facilities (Manufacturing Powerhouses) ── */
+  .facility-card div[style*="height:240px"] {
+    height: 200px !important;
+    border-radius: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .facility-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* ── Certifications Section — 3 Certificates in 1 Row ── */
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(180px"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .cert-card img {
+    height: 80px !important;
+    padding: 0.35rem !important;
+    object-fit: contain !important;
+  }
+
+  .cert-card>div[style*="padding:1rem"] {
+    padding: 0.35rem 0.2rem !important;
+  }
+
+  .cert-card div[style*="font-size:0.8rem"] {
+    font-size: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .cert-card div[style*="font-size:0.68rem"] {
+    font-size: 0.52rem !important;
+    line-height: 1.2 !important;
+    margin-top: 0.15rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Keep certs in 1 row (3-col) even on small phones */
+  div[style*="grid-template-columns:repeat(auto-fit,minmax(180px"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.35rem !important;
+  }
+
+  .cert-card img {
+    height: 70px !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §10  CLIENTS PAGE — SPECIFIC SECTIONS
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Partner grid: 4-col -> 2-col */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.875rem !important;
+  }
+
+  /* Client tile height and padding */
+  .client-tile {
+    min-height: 85px !important;
+    padding: 0.875rem !important;
+  }
+
+  /* Client logo max size */
+  .client-grid-img {
+    max-height: 42px !important;
+  }
+
+  /* ── Testimonial section mobile grouping & layout fixes ── */
+  div[style*="max-width:960px"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .premium-test-card {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.5rem 1.25rem !important;
+    min-height: auto !important;
+    border-radius: 1rem !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-top: 3px solid var(--gold) !important;
+    box-shadow: 0 8px 24px rgba(10, 25, 47, 0.08) !important;
+    text-align: center !important;
+    position: relative !important;
+  }
+
+  /* Quote text: place FIRST at top of card (Order 1) */
+  .premium-test-card p {
+    order: 1 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    margin: 0 0 0.875rem 0 !important;
+    text-align: center !important;
+    color: var(--navy) !important;
+    font-style: italic !important;
+  }
+
+  /* Client logo container: place SECOND at bottom of card (Order 2) */
+  .premium-test-card > div[style*="display:flex;justify-content:center"] {
+    order: 2 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Hide artificial <br> line breaks inside testimonials on mobile */
+  .premium-test-card p br {
+    display: none !important;
+  }
+
+  /* Hide decorative quote mark and divider on mobile for clean card grouping */
+  .premium-test-card > div[style*="font-family:'Georgia'"],
+  .premium-test-card > div[style*="height:1px"] {
+    display: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §11  CONTACT PAGE — SPECIFIC SECTIONS
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Form card padding */
+  .contact-form {
+    padding: 0;
+  }
+
+  div[style*="border-radius:1.5rem"][style*="padding:3rem"] {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  /* Both name + email/phone grids -> stacked */
+  .contact-form form>div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Map height reduction */
+  div[style*="height:420px"] {
+    height: 260px !important;
+  }
+
+  /* Floating watermark: hide on mobile */
+  div[style*="right:-50px"][style*="width:750px"] {
+    display: none !important;
+  }
+
+  /* Map overlay card: prevent overflow */
+  div[style*="position:absolute;bottom:1.5rem;left:1.5rem"] {
+    min-width: auto !important;
+    max-width: calc(100% - 3rem);
+    padding: 0.875rem 1rem !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §12  HOVER STATES — disable lift on touch devices
+   ───────────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+
+  .product-card:hover,
+  .card:hover,
+  .card-dark:hover,
+  .cert-card:hover,
+  .other-card:hover,
+  .client-tile:hover,
+  .quote-card:hover,
+  .value-badge:hover,
+  .arch-card:hover,
+  .arch-card:hover img {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §13  ZAM COMPARISON TABLE — horizontal scroll
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .zam-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .zam-table th,
+  .zam-table td {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.75rem;
+    min-width: 110px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   §14  TYPOGRAPHY — MOBILE FONT SCALING
+   Tablet  : ≤ 768px
+   Phone   : ≤ 480px
+   ───────────────────────────────────────── */
+
+/* ── Tablet (768px and below) ── */
+@media (max-width: 768px) {
+
+  /* Base body */
+  body {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  /* All headings — tighten letter-spacing & weight feel */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── Hero headings (inline-styled, need !important) ── */
+  /* index.html hero h1 */
+  .hero-home h1 {
+    font-size: clamp(1.7rem, 7vw, 2.6rem) !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* page-hero h1 (About / Products / Contact / Clients) */
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.8rem) !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.05 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Hero sub-paragraph */
+  .hero-home p,
+  .page-hero p {
+    font-size: 0.875rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ── Section h2 titles ── */
+  h2 {
+    font-size: clamp(1.4rem, 5.5vw, 2rem) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* ── Section h3 (product card headings, facility names) ── */
+  h3 {
+    font-size: 1.05rem !important;
+  }
+
+  /* ── Section label (small uppercase badges) ── */
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.625rem;
+  }
+
+  /* ── Nav links ── */
+  .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* ── Buttons ── */
+  .btn-gold,
+  .btn-outline {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.14em !important;
+    padding: 0.875rem 1.25rem !important;
+  }
+
+  /* ── Stat numbers (clamp already handles them, but cap the max) ── */
+  .stat-num {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  /* ── Product card body text ── */
+  .product-card p {
+    font-size: 0.78rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .product-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* ── Spec rows ── */
+  .spec-row {
+    font-size: 0.73rem;
+  }
+
+  /* ── Value badges ── */
+  .value-badge {
+    font-size: 0.78rem;
+  }
+
+  /* ── Client tile text ── */
+  .client-tile span {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── Quote / testimonial cards ── */
+  .quote-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .quote-card p {
+    font-size: 0.82rem !important;
+  }
+
+  /* ── Footer ── */
+  .footer-link {
+    font-size: 0.75rem;
+  }
+
+  /* ── Arch-card glass overlay — smaller box + tighter fonts ── */
+  .arch-glass-content {
+    padding: 0.75rem 0.875rem !important;
+    /* was 1.5rem */
+    border-radius: 0.75rem !important;
+    /* was 1.25rem */
+    backdrop-filter: blur(10px) !important;
+  }
+
+  /* Section-label inside the card — make it tiny to save space */
+  .arch-glass-content .section-label {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  /* Heading: down from 1.4rem → 0.85rem */
+  .arch-glass-content h3 {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  /* Body paragraph: down from 0.8rem → 0.68rem */
+  .arch-glass-content p {
+    font-size: 0.68rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+
+  /* ── About / index inline body paragraphs ── */
+  section p[style*="font-size:1.05rem"],
+  section p[style*="font-size:1rem"],
+  section p[style*="font-size:0.95rem"] {
+    font-size: 0.875rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── ZAM chemistry box symbol ── */
+  .chem-box>div:first-child {
+    font-size: 1.5rem !important;
+  }
+
+  /* ── Timeline year numbers ── */
+  .timeline-item>div>div[style*="font-size:1.75rem"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* ── Products intro stat strip numbers ── */
+  div[style*="font-size:1.75rem;font-weight:900;color:var(--gold)"] {
+    font-size: 1.4rem !important;
+  }
+
+  /* ── Section-pad further reduction ── */
+  .section-pad {
+    padding: 3.5rem 0;
+  }
+}
+
+/* ── Small phone (480px and below) ── */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 0.825rem;
+  }
+
+  /* Hero headings: even smaller on phones */
+  .hero-home h1 {
+    font-size: clamp(1.5rem, 8.5vw, 2rem) !important;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.5rem, 9vw, 2.2rem) !important;
+  }
+
+  /* Section h2 */
+  h2 {
+    font-size: clamp(1.25rem, 6vw, 1.65rem) !important;
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* Buttons */
+  .btn-gold,
+  .btn-outline {
+    font-size: 0.6rem !important;
+    padding: 0.8rem 1rem !important;
+  }
+
+  /* Product card */
+  .product-card h3 {
+    font-size: 1rem !important;
+  }
+
+  .product-card p {
+    font-size: 0.74rem !important;
+  }
+
+  /* Section-pad */
+  .section-pad {
+    padding: 2.75rem 0;
+  }
+
+  /* Footer text */
+  .footer-link {
+    font-size: 0.7rem;
+  }
+
+  /* Mobile overlay links */
+  #mobile-overlay a:not(.btn-gold) {
+    font-size: 1.1rem;
+  }
+}
