@@ -315,10 +315,10 @@
     margin-bottom: 0.15rem !important;
   }
 
-  /* Element name label (ZINC 91% etc.) */
+  /* Element name label (Zinc, Aluminum, Magnesium) */
   .chem-box>div:nth-child(2) {
-    font-size: 0.58rem !important;
-    letter-spacing: 0.03em !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.04em !important;
   }
 
   /* Element description text */

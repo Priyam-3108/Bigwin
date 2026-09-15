@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Bigwin Buildsys</title>
   <meta name="description"
-    content="Get in touch with Bigwin Buildsys: Mumbai headquarters, Gujarat and Rajasthan plants. Call +91 99873 00555 or email info@spanoindustry.com.">
+    content="Get in touch with Bigwin Buildsys: Mumbai headquarters, Gujarat and Chhattisgarh plants. Call +91 99873 00555 or email sales@bigwinbuildsys.com.">
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -278,8 +278,8 @@
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <a href="mailto:info@spanoindustry.com"
-                  style="font-size:0.82rem;color:rgba(255,255,255,0.7);text-decoration:none">info@spanoindustry.com</a>
+                <a href="mailto:sales@bigwinbuildsys.com"
+                  style="font-size:0.82rem;color:rgba(255,255,255,0.7);text-decoration:none">sales@bigwinbuildsys.com</a>
               </div>
             </div>
           </div>
@@ -289,30 +289,6 @@
     </div>
   </section>
 
-  <!-- MAP SECTION -->
-  <section style="background:white;padding:0 0 5rem 0">
-    <div class="container-xl">
-      <div
-        style="background:var(--off-white);border:1px solid #e8edf5;border-radius:1.5rem;overflow:hidden;height:420px;position:relative">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.0!2d72.8569!3d19.2294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sBorivali+West%2C+Mumbai!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-          width="100%" height="100%" style="border:0;filter:grayscale(0.3)" allowfullscreen="" loading="lazy"></iframe>
-        <div
-          style="position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(10,25,47,0.95);backdrop-filter:blur(12px);border:1px solid rgba(212,175,55,0.2);border-radius:0.875rem;padding:1.25rem;min-width:250px">
-          <div
-            style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:0.5rem">
-            HQ Location</div>
-          <div style="font-weight:700;color:white;font-size:0.9rem">Borivali West, Mumbai</div>
-          <div style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.25rem">9th Floor, Friends Business Bay
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <!-- FOOTER -->
-  <!-- FOOTER -->
   <!-- FOOTER -->
   <footer style="padding:4rem 0 2rem">
     <div class="container-xl">
@@ -350,7 +326,7 @@
           <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:0.75rem">9th Floor, 903,
             Friends Business Bay, Borivali West, Mumbai 400092</p>
           <a href="tel:+919987300555" class="footer-link">+91 99873 00555</a>
-          <a href="mailto:info@spanoindustry.com" class="footer-link">info@spanoindustry.com</a>
+          <a href="mailto:sales@bigwinbuildsys.com" class="footer-link">sales@bigwinbuildsys.com</a>
         </div>
       </div>
       <div
@@ -367,18 +343,18 @@
   <script>
     function submitForm(e) {
       e.preventDefault();
-      
+
       const form = e.target;
       const button = form.querySelector('button[type="submit"]');
       const originalText = button.innerHTML;
-      
+
       // Show sending state
       button.disabled = true;
       button.innerHTML = '<span>Sending...</span>';
-      
+
       // CONFIGURATION: Replace this with your Web3Forms Access Key
-      const ACCESS_KEY = "2a6bc4c0-9b5a-4d31-9791-be40d412d600"; 
-      
+      const ACCESS_KEY = "2a6bc4c0-9b5a-4d31-9791-be40d412d600";
+
       const data = {
         access_key: ACCESS_KEY,
         subject: "New Web Inquiry | " + form.company.value + " - " + form.product.value,
@@ -391,32 +367,32 @@
         "Product Interest": form.product.value,
         "Message": form.message.value
       };
-      
+
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(data)
       })
-      .then(response => response.json())
-      .then(resData => {
-        button.disabled = false;
-        button.innerHTML = originalText;
-        if (resData.success) {
-          document.getElementById('formSuccess').style.display = 'block';
-          form.reset();
-          document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-          alert("Submission failed: " + (resData.message || "Please check your access key."));
-        }
-      })
-      .catch(error => {
-        button.disabled = false;
-        button.innerHTML = originalText;
-        alert("An error occurred: " + error.message);
-      });
+        .then(response => response.json())
+        .then(resData => {
+          button.disabled = false;
+          button.innerHTML = originalText;
+          if (resData.success) {
+            document.getElementById('formSuccess').style.display = 'block';
+            form.reset();
+            document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            alert("Submission failed: " + (resData.message || "Please check your access key."));
+          }
+        })
+        .catch(error => {
+          button.disabled = false;
+          button.innerHTML = originalText;
+          alert("An error occurred: " + error.message);
+        });
     }
   </script>
   <style>

@@ -76,4 +76,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  // ── Product Deep-Linking from Home / External ──
+  function handleDeepLink() {
+    const hash = window.location.hash;
+    if (!hash) return;
+    try {
+      const target = document.querySelector(hash);
+      if (target) {
+        // Immediately reveal target and all its children
+        target.classList.add('visible');
+        target.querySelectorAll('.reveal').forEach(r => r.classList.add('visible'));
+
+        // Smooth scroll with offset for fixed header
+        setTimeout(() => {
+          const headerHeight = 100;
+          const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetTop,
+            behavior: 'smooth'
+          });
+
+          // Apply focus highlight effect
+          target.classList.remove('product-focus-highlight');
+          void target.offsetWidth; // Force reflow
+          target.classList.add('product-focus-highlight');
+        }, 150);
+      }
+    } catch (e) {
+      // Ignore invalid selector in hash
+    }
+  }
+
+  if (window.location.hash) {
+    handleDeepLink();
+  }
+  window.addEventListener('hashchange', handleDeepLink);
+
+  // ── Benefit Tabs Switcher ──
+  document.querySelectorAll('.benefit-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.closest('.benefits-tab-widget');
+      if (!parent) return;
+      parent.querySelectorAll('.benefit-tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      parent.querySelectorAll('.benefit-tab-pane').forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const targetPane = parent.querySelector(`#pane-${btn.dataset.tab}`);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+
 });
